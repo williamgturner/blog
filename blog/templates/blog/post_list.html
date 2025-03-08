@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Will's Blog</title>
+    </head>
+    <nav class="flex justify-between bg-gray-800 p-4 text-white">
+        <a href="#" class="text-lg font-bold">WillSpace</a>
+        <ul class="flex space-x-4">
+          <li><a href="#" class="hover:text-gray-400">Blog</a></li>
+          <li><a href="#" class="hover:text-gray-400">About</a></li>
+          <li><a href="#" class="hover:text-gray-400">Contact</a></li>
+        </ul>
+      </nav>
+    <body>
+        <div class="w-4/5 mx-auto p-8 bg-white shadow-lg">
+            <h1>Welcome to Will's Blog</h1>
+            {% for post in posts %}
+            <article class = "flex flex-col justify-center items-center">
+                <h2><a href="">{{ post.title }}</a></h2>
+                <time class="text-gray-500 text-sm italic">Published: {{ post.published_date }}</time>
+                <p>{{ post.body|linebreaksbr }}</p>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="Post Image">
+                {% endif %}
+            </article>
+            <hr class="my-8 border-t-2 border-gray-300">
+            {% endfor %}
+        </div>
+    </body>
+</html>
