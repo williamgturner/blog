@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+import Navbar from '../components/navbar.astro';
 ---
 
 <html lang="en">
@@ -11,6 +12,7 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Will's Blog</h1>
+		<Navbar />
+		<h1 style="display: inline-block;">Will's Blog</h1>
 	</body>
 </html>
