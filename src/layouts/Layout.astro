@@ -19,7 +19,7 @@ import "../styles/global.css";
   </head>
   <body>
     <nav>
-      <ul class="pl-[10rem]">
+      <ul>
         <li>
           <a href="/">home</a>
         </li>
@@ -39,6 +39,7 @@ import "../styles/global.css";
           <a href="/about/">about</a>
         </li>
       </ul>
+      <span>© Copyright 2025 — William Turner</span>
     </nav>
     <div id="content">
       <slot />
@@ -62,17 +63,18 @@ import "../styles/global.css";
     height: 100vh;
     font-family: "incosolota";
     font-size: 1.5rem;
-    padding-right: 10rem;
+    padding-right: 15%;
   }
 
   ul {
     width: auto;
-    margin-top: 10rem;
+    margin-top: 60%;
+    padding-left: 10vw;
   }
 
   li {
     color: #222222;
-    margin-bottom: 2rem;
+    margin-bottom: 50%;
     width: auto;
   }
 
@@ -96,8 +98,19 @@ import "../styles/global.css";
     width: 100%;
   }
 
+  /* VIBE CODED!! Fix... */
+  nav span {
+    position: absolute; /* Position it absolutely inside the nav */
+    bottom: 10px; /* 10px from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center it */
+    font-size: 1rem;
+    color: #c9c6b1;
+  }
+
   #content {
     flex-grow: 1;
     overflow-y: auto;
+    margin-right: 15%;
   }
 </style>

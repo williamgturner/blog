@@ -6,10 +6,36 @@ import Layout from "../layouts/Layout.astro";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width" />
     <title>will</title>
   </head>
   <Layout title="about">
-    <h1>me</h1>
+    <h1>will turner</h1>
+    <section id="aboutContent">
+      <p>
+        hello, I'm Will; A 20 year old computer science student from New Zealand
+        passionate about creating unique and useful full-stack applications. I
+        am currently in my final year of a BSc at the University of Canterbury.
+        When I'm not programming I love to create and listen to music, read,
+        document my life, and explore the outdoors.
+      </p>
+    </section>
   </Layout>
 </html>
+<style>
+  h1 {
+    font-family: "Inconsolata", serif;
+    font-size: 50px;
+    margin-top: 5rem;
+  }
+
+  p {
+    font-family: "Inconsolata", sans-serif;
+  }
+</style>
